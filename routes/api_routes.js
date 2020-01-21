@@ -32,16 +32,26 @@ module.exports = function(app) {
             if(err) throw err;
             parsedData = JSON.parse(data);
             parsedData.push(incomingNote);
+            let number = 1
+            parsedData.forEach((note, index) => {
+                  note.id = number;
+                  number++;
+                  return parsedData;
+            });
+            console.log(parsedData);
+
             stringData = JSON.stringify(parsedData);
 
             fs.writeFile("./db/db.json", stringData, (err, data) => {
                 if (err) throw err;
                 })
         })
-
         res.send("Thank you for your note!");
-
     })
+
+
+
+
 
 
 
