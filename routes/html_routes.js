@@ -16,14 +16,14 @@ module.exports = function(app) {
 
 
 
-    //add css route here
+  //   //add css route here
     app.get("/assets/css/styles.css", function(req, res) {
       res.sendFile(path.join(__dirname, "../public/assets/css/styles.css"))
     })
 
 
   
-    // If no matching route is found default to home
+  //   // If no matching route is found default to home
     app.get("/assets/js/index.js", function(req, res) {
       res.sendFile(path.join(__dirname, "../public/assets/js/index.js"));
     });
