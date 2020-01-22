@@ -17,7 +17,9 @@ The front-end of this app (HTML, CSS, Bootstrap and front-end Javascript) was pr
 
 ## Meta-Data
 Alex Dollard: alexdollard141@gmail.com
+
 Heroku-hosted app: https://fast-springs-35343.herokuapp.com/
+
 GitHub repo: https://github.com/acdollard/note_taker
 
 
