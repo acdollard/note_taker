@@ -1,19 +1,9 @@
 let fs = require("fs"); 
 
-// let dataBase = require("./db/db")
-
-// let noteData = fs.readFile("./db/db.json",  (err, data) => {
-//     if (err) throw err;
-//     console.log(JSON.parse(data));
-
-
-
-console.log("noteData");
-
 module.exports = function(app) {
 
 
-
+    //gets and sends the parsed notes as JSON object
     app.get("/api/notes", function(req, res) {
         fs.readFile("./db/db.json",  (err, data) => {
         if (err) throw err;
@@ -23,7 +13,7 @@ module.exports = function(app) {
     }); 
 
 
-
+    //recieves incoming note, pushes it into notes array, assigns all notes an ID#, re-writes JSON file
     app.post("/api/notes", function(req, res) {
 
         let incomingNote = req.body
