@@ -63,7 +63,7 @@ module.exports = function(app) {
                 if (err) throw err;
                 })
         })
-        res.send("Note Deleted.")
+        res.status(204).send(); 
     })
 
 
